@@ -2,7 +2,7 @@
 //  CONFIG — Update these when your token launches
 // ─────────────────────────────────────────────
 const CONFIG = {
-  tokenAddress: "TBA",
+  tokenAddress: "8UM93UugchngnthEg9bnM1toKMLyR3afBZpHoMn7pump",
 
   // Optional: DexScreener pair address (overrides tokenAddress for chart)
   dexScreenerPair: "",
@@ -14,11 +14,11 @@ const CONFIG = {
   telegram: "https://t.me/zbullsol",
 };
 
-const PLACEHOLDER_CA = "TBA";
+const PLACEHOLDER_CA = "8UM93UugchngnthEg9bnM1toKMLyR3afBZpHoMn7pump";
 
 function isTokenLive() {
   const addr = CONFIG.tokenAddress;
-  return Boolean(addr) && addr !== "TBA";
+  return Boolean(addr) && addr !== "8UM93UugchngnthEg9bnM1toKMLyR3afBZpHoMn7pump";
 }
 
 function getChartId() {
@@ -28,8 +28,8 @@ function getChartId() {
 
 function getPumpFunUrl() {
   if (CONFIG.pumpFunUrl) return CONFIG.pumpFunUrl;
-  if (isTokenLive()) return `https://pump.fun/coin/TBA/coin/${CONFIG.tokenAddress}`;
-  return "https://pump.fun/coin/TBA";
+  if (isTokenLive()) return `https://pump.fun/coin/8UM93UugchngnthEg9bnM1toKMLyR3afBZpHoMn7pump/coin/${CONFIG.tokenAddress}`;
+  return "https://pump.fun/coin/8UM93UugchngnthEg9bnM1toKMLyR3afBZpHoMn7pump";
 }
 
 function buildDexScreenerEmbedUrl(id) {
@@ -46,7 +46,7 @@ function buildDexScreenerEmbedUrl(id) {
     chartType: "usd",
     interval: "15",
   });
-  return `https://dexscreener.com/solana/TBA/${id}?${params.toString()}`;
+  return `https://dexscreener.com/solana/8UM93UugchngnthEg9bnM1toKMLyR3afBZpHoMn7pump/${id}?${params.toString()}`;
 }
 
 function initContract() {
@@ -94,13 +94,13 @@ function initChart() {
   if (!chartId) {
     iframe.classList.add("hidden");
     placeholder.classList.remove("hidden");
-    link.href = "https://dexscreener.com/solana/TBA";
+    link.href = "https://dexscreener.com/solana/8UM93UugchngnthEg9bnM1toKMLyR3afBZpHoMn7pump";
     link.textContent = "Browse Solana pairs on DexScreener →";
     return;
   }
 
   iframe.src = buildDexScreenerEmbedUrl(chartId);
-  link.href = `https://dexscreener.com/solana/TBA/${chartId}`;
+  link.href = `https://dexscreener.com/solana/8UM93UugchngnthEg9bnM1toKMLyR3afBZpHoMn7pump/${chartId}`;
 }
 
 function initNav() {

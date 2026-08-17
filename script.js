@@ -46,7 +46,7 @@ function buildDexScreenerEmbedUrl(id) {
     chartType: "usd",
     interval: "15",
   });
-  return `https://dexscreener.com/solana/${id}?${params.toString()}`;
+  return `https://dexscreener.com/solana/TBA/${id}?${params.toString()}`;
 }
 
 function initContract() {
@@ -94,13 +94,13 @@ function initChart() {
   if (!chartId) {
     iframe.classList.add("hidden");
     placeholder.classList.remove("hidden");
-    link.href = "https://dexscreener.com/solana";
+    link.href = "https://dexscreener.com/solana/TBA";
     link.textContent = "Browse Solana pairs on DexScreener →";
     return;
   }
 
   iframe.src = buildDexScreenerEmbedUrl(chartId);
-  link.href = `https://dexscreener.com/solana/${chartId}`;
+  link.href = `https://dexscreener.com/solana/TBA/${chartId}`;
 }
 
 function initNav() {

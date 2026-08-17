@@ -316,16 +316,16 @@ body {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(3.6rem, 13vw, 7.2rem);
+  font-size: clamp(1.85rem, 9.2vw, 5.6rem);
   font-weight: 400;
-  line-height: 0.88;
-  letter-spacing: 0.04em;
+  line-height: 1;
+  letter-spacing: 0.06em;
   margin-bottom: 0.15rem;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .title-metal {
-  display: block;
   color: var(--silver);
   text-shadow:
     0 0 22px rgba(180, 77, 255, 0.55),
@@ -334,7 +334,6 @@ body {
 }
 
 .title-white {
-  display: block;
   color: #f3f3f6;
   text-shadow: 0 3px 0 rgba(0, 0, 0, 0.7);
 }
@@ -1067,7 +1066,8 @@ body {
   }
 
   .hero-title {
-    font-size: 3.1rem;
+    font-size: clamp(1.55rem, 8.4vw, 2.4rem);
+    letter-spacing: 0.04em;
   }
 
   .x-thread {

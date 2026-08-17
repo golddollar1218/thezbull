@@ -10,8 +10,8 @@ const CONFIG = {
   // pump.fun coin page — auto-built from tokenAddress if left empty
   pumpFunUrl: "",
 
-  twitter: "https://x.com/AnsemIsBackX",
-  telegram: "https://t.me/ansemisback_portal",
+  twitter: "https://x.com/zbullsol",
+  telegram: "https://t.me/zbullsol",
 };
 
 const PLACEHOLDER_CA = "TBA";
@@ -28,8 +28,8 @@ function getChartId() {
 
 function getPumpFunUrl() {
   if (CONFIG.pumpFunUrl) return CONFIG.pumpFunUrl;
-  if (isTokenLive()) return `https://pump.fun/coin/${CONFIG.tokenAddress}`;
-  return "https://pump.fun";
+  if (isTokenLive()) return `https://pump.fun/coin/TBA/coin/${CONFIG.tokenAddress}`;
+  return "https://pump.fun/coin/TBA";
 }
 
 function buildDexScreenerEmbedUrl(id) {
